@@ -37,9 +37,3 @@ int lengthOfLongestSubstring(char* s) {
     }
     return max;
 }
-
-int main(void) {
-    char* str = "abc abc bc";
-    printf("\"%s\": %d",str, lengthOfLongestSubstring(str));
-    return 0;
-}

@@ -3,5 +3,5 @@ project(cs_proj C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(cs_proj main.c)
+add_executable(cs_proj main.c leetcode_projects/longest_substring.c)
 target_link_libraries(cs_proj m)

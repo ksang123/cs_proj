@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include "leetcode.h"
 
 int main(void) {
-    printf("hello world!\n");
+    char* str = "abc abc bc";
+    printf("\"%s\": %d",str, lengthOfLongestSubstring(str));
     return 0;
 }
