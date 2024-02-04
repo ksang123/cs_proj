@@ -27,8 +27,20 @@ int switch_digits(int number, int pos_a, int pos_b) {
     }
     int len = number_len(number), digit_a, digit_b;
     //the len of the number, the digit in pos_a, the digit in pos_b
-    if (pos_a > len || pos_b > len) {//check that the positions are valid
-        printf("position outside number..\n");
+    if (pos_a > len) {//check that the positions are valid
+        printf(
+                "postion %d is outside the number."
+                " number's length is %d\n",
+                pos_a,
+                len);
+        return 0;
+    }
+    if (pos_b > len) {//check that the positions are valid
+        printf(
+                "postion %d is outside the number."
+                " number's length is %d\n",
+                pos_b,
+                len);
         return 0;
     }
     digit_a = number % pow_10(pos_a) / pow_10(pos_a - 1);

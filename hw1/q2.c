@@ -1,48 +1,9 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define WINDOW_SIZE 5
-
-void shift_window(int* window, int new) {
-    //the shifts the window to the next int and removes the last 1
-    for(int i = 0; i < WINDOW_SIZE - 1; i++) {
-        //iterate over every value in the window
-        window[i] = window[i+1]; //move it to the spot before it
-    }
-    window[WINDOW_SIZE-1] = new; // insert the new value
-}
-
-double k_window_avg(const int* window, int k) {
-    //calculates the average of the last k items in the window
-    double sum = 0; //the sum of the items
-    for (int i = WINDOW_SIZE - 1; i > WINDOW_SIZE - 1 - k; i--) {
-        // iterate over the k last items in the window
-        sum += (double)window[i]; //sum the k last items in the window
-    }
-    return sum / k; //calculate the average
-}
-
-void print_num(int* window, int current, int index) {
-    if (current % 5 == 0) { //check if the current number is divisible by 5
-        if (index >= 5) { //check if there are enough items in the window
-            printf("%.2lf", k_window_avg(window, 5));
-            //calculate the average of the last 5 items in the window
-        } else {
-            printf("%.2lf", (double)current);//print the current number
-        }
-    } else {
-        if (index >= 3) { //chcek if there are enough items in the window
-            printf("%.2lf", k_window_avg(window, 3));
-            //calculate the average of the last 3 items in the window
-        } else {
-            printf("%.2lf", (double)current);//print the current number
-        }
-    }
-}
-
-
 int main(void) {
-    int window[WINDOW_SIZE] = {0}, index = 1, current, result;
+    int index = 1, current, result;
+    int num1 = 0, num2 = 0, num3 = 0, num4 = 0, num5 = 0;
     /*creating the window, index (amount of numbers inserted),
      * the current number and the scanf result*/
     bool first = true;
@@ -56,9 +17,30 @@ int main(void) {
         } else {
             printf(", "); //if the number isn't the first, print a comma
         }
-        shift_window(window, current);
         //shift the window and insert the new number
-        print_num(window, current, index); //print the number or the average
+        num1 = num2;
+        num2 = num3;
+        num3 = num4;
+        num4 = num5;
+        num5 = current;
+        if (current % 5 == 0) { //check if the current number is divisible by 5
+            if (index >= 5) { //check if there are enough items in the window
+                printf("%.2lf",
+                       (double)(num1 + num2 + num3 + num4 + num5)/5);
+                //calculate the average of the last 5 items in the window
+            } else {
+                printf("%.2lf", (double)current);
+                //print the current number
+            }
+        } else {
+            if (index >= 3) { //chcek if there are enough items in the window
+                printf("%.2lf", (double)(num3 + num4 + num5)/3);
+                //calculate the average of the last 3 items in the window
+            } else {
+                printf("%.2lf", (double)current);
+                //print the current number
+            }
+        }
         result = scanf("%d", &current);//scan the new number
         index++;//increment the index
     }
