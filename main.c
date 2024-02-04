@@ -1,5 +1,5 @@
 #include <stdio.h>
 
 int main(void) {
-    return 0; //test
+    return 0;
 }
