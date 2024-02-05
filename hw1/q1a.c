@@ -4,7 +4,7 @@
 int check_string(char cool_letter) {
     int score = 0; //the score of the string
     char current = (char)getchar(); //the current character in the string
-    while(current != '\n' && current != -1) { //loop until we get an EOF or \n
+    while(current != -1) { //loop until we get an EOF or \n
         if (current == cool_letter || current == cool_letter - 'a' + 'A'
             || current == cool_letter - 'A' + 'a') {
             //check if the current character is a cool letter
