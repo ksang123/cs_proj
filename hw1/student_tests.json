@@ -2,73 +2,103 @@
   "tests": [
     {
       "name": "Input example test",
-      "input": "b Babbling bumbling band of baboons",
-      "output": "Please Enter Cool Letter:\nPlease Enter Text:\nThe score is: 8"
+      "input": "12345\n2\n5",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: 42315\n"
     },
     {
-      "name": "Test input text starts with non cool letter",
-      "input": "b aBabbling bumbling band of baboons",
-      "output": "Please Enter Cool Letter:\nPlease Enter Text:\nThe score is: 8"
+      "name": "Simple example test",
+      "input": "12\n2\n1",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: 21\n"
     },
     {
-      "name": "Bad letter test",
-      "input": "b Babbling bumbling b@nd of baboons",
-      "output": "Please Enter Cool Letter:\nPlease Enter Text:\nThe score is: -1"
+      "name": "Millionaire example test",
+      "input": "1122543\n3\n7",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: 5122143\n"
     },
     {
-      "name": "Input example test capital no newline in the end of the input",
-      "input": "B Babbling bumbling band of baboons",
-      "output": "Please Enter Cool Letter:\nPlease Enter Text:\nThe score is: 8"
+      "name": "Same digit in both places",
+      "input": "11225431\n1\n7",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: 11225431\n"
     },
     {
-      "name": "Input example test capital letter",
-      "input": "B Babbling bumbling band of baboons",
-      "output": "Please Enter Cool Letter:\nPlease Enter Text:\nThe score is: 8"
+      "name": "Same coordinate in both places",
+      "input": "71225432\n2\n2",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: 71225432\n"
     },
     {
-      "name": "Input example test letter Z<foo<a",
-      "input": "B Babbling bumbling ^band of baboons",
-      "output": "Please Enter Cool Letter:\nPlease Enter Text:\nThe score is: -1"
+      "name": "Negative number test",
+      "input": "-1122543\n3\n7",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: -5122143\n"
     },
     {
-      "name": "Input example test letter z<foo",
-      "input": "B Babbling bumbling ~band of baboons",
-      "output": "Please Enter Cool Letter:\nPlease Enter Text:\nThe score is: -1"
+      "name": "Negative and same digit in both places",
+      "input": "-11225431\n1\n7",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: -11225431\n"
     },
     {
-      "name": "Input example test letter foo<A",
-      "input": "B Babbling bumbling !band of baboons",
-      "output": "Please Enter Cool Letter:\nPlease Enter Text:\nThe score is: -1"
+      "name": "Negative and same coordinate in both places",
+      "input": "-71225432\n2\n2",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: -71225432\n"
     },
     {
-      "name": "Test lower case conversion logic",
-      "input": "A Babbling bumbling !band of baboons",
-      "output": "Please Enter Cool Letter:\nPlease Enter Text:\nThe score is: -1"
+      "name": "Swap last digit with a zero pos number",
+      "input": "325402\n6\n2",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: 25432\n"
     },
     {
-      "name": "Test lower case conversion logic 2",
-      "input": "B Babbling bumbling \"band of baboons",
-      "output": "Please Enter Cool Letter:\nPlease Enter Text:\nThe score is: -1"
+      "name": "Swap last digit with a zero neg number",
+      "input": "-325402\n6\n2",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: -25432\n"
     },
     {
-      "name": "Input example test text with backslash",
-      "input": "B Babbling bumbling \\band of baboons",
-      "output": "Please Enter Cool Letter:\nPlease Enter Text:\nThe score is: -1"
+      "name": "Swap last digit with a zero that has multi zeros after it pos number",
+      "input": "30002\n5\n2",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: 32\n"
     },
     {
-      "name": "Input example test text with newline",
-      "input": "B Babbling bumbling\nband of baboons",
-      "output": "Please Enter Cool Letter:\nPlease Enter Text:\nThe score is: -1"
+      "name": "Swap last digit with a zero that has multi zeros after it neg number",
+      "input": "-30002\n5\n2",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: -32\n"
     },
     {
-      "name": "Input example test text that ends with multiple spaces",
-      "input": "B Babbling bumbling band of baboons         ",
-      "output": "Please Enter Cool Letter:\nPlease Enter Text:\nThe score is: 8"
+      "name": "Swap last digit with a zero that has only zeros after it pos number",
+      "input": "30000\n5\n2",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: 30\n"
     },
     {
-      "name": "Input example test text that end with invalid letter",
-      "input": "B Babbling bumbling band of baboons\\",
-      "output": "Please Enter Cool Letter:\nPlease Enter Text:\nThe score is: -1"
+      "name": "Swap digits with position larger that 9",
+      "input": "2001000123\n10\n3",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: 1001000223\n"
+    },
+    {
+      "name": "Swap last digit with a zero that has multi zeros after it neg number",
+      "input": "-30000\n5\n2",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: -30\n"
+    },
+    {
+      "name": "Swap last digit with a zero that has only zeros after it swap w first dig pos number",
+      "input": "30000\n5\n1",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: 3\n"
+    },
+    {
+      "name": "Swap last digit with a zero that has multi zeros after it swap w first dig neg number",
+      "input": "-30000\n5\n1",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: -3\n"
+    },
+    {
+      "name": "Test max pos int32",
+      "input": "2147483647\n4\n8",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: 2137484647\n"
+    },
+    {
+      "name": "Test max neg int32",
+      "input": "-2147483648\n4\n8",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: -2137484648\n"
+    },
+    {
+      "name": "Test zero",
+      "input": "00000000\n4\n6",
+      "output": "Please enter the number:\nPlease enter the positions:\nThe new number is: 0\n"
     }
   ]
 }

@@ -19,7 +19,7 @@ int check_string(char cool_letter1, char cool_letter2, char cool_letter3) {
     int score = 0;//the score of the string
     char current = (char)getchar(); //the current character in the string
     bool letter1 = false, letter2 = false, letter3 = false;
-    while(current != '\n' && current != -1) { //loop until we get an EOF or \n
+    while(current != -1) { //loop until we get an EOF or \n
         score += get_score(current, cool_letter1, &letter1);
         //add score for 1st cool letter
         score += get_score(current, cool_letter2, &letter2);
