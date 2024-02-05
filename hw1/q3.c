@@ -46,7 +46,7 @@ int main(void) {
     printf("Please enter the positions:\n");
     scanf("%d %d", &pos_a, &pos_b);
     //get the positions
-    number = switch_digits((long)number, pos_a, pos_b);
+    number = (int)switch_digits((long)number, pos_a, pos_b);
     printf("The new number is: %d\n", number);
     return 0;
 }
