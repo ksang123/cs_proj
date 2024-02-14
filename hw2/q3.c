@@ -25,13 +25,13 @@ int main(void) {
 void longestContinuousEvenSequence(int arr[], int len) {
     int longest_len = 0, longest_index = -1;
     //the index and length of the longest sequence
-    int current_len = 0, last_even = 0, starting_index = 0;
+    int current_len = 0, last_even = -1, starting_index = 0;
     //the len of the current sequence,
     //the last even number and the starting index of the sequence
     for(int i = 0; i < len; i++) {//go through every item on the array
         //check if the item qualifies for the sequence
         if (arr[i] % 2 == 0 && arr[i] > 0 &&
-            (arr[i] - 2 == last_even || last_even == 0)) {
+            (arr[i] - 2 == last_even || last_even == -1)) {
             current_len++;//add the item to the sequence
             last_even = arr[i];
         } else {
@@ -41,9 +41,16 @@ void longestContinuousEvenSequence(int arr[], int len) {
                 longest_len = current_len;
                 longest_index = starting_index;
             }
-            starting_index = i + 1;//reset variables for new sequence
-            current_len = 0;
-            last_even = 0;
+            //reset variables for new sequence
+            if (arr[i] % 2 == 0 && arr[i] > 0) {
+                current_len = 1;
+                last_even = arr[i];
+                starting_index = i;
+            } else {
+                current_len = 0;
+                last_even = -1;
+                starting_index = i + 1;
+            }
         }
     }
     if (current_len > longest_len) {//if the sequence ended on the last item
