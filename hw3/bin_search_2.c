@@ -50,7 +50,7 @@ int main(void) {
 }
 
 /*************************Functions implementations****************************/
-int k_closest_to_target(int arr[], int n, int target, int k){
+int k_closest_to_target(int arr[], int n, int target, int k) {
     int index = binary_search(arr, n, target); //find the index of target
     if (index == -1) {
         return -1;
