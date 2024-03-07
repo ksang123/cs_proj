@@ -19,6 +19,9 @@
  */
 int search_shift_arr(int arr[], int n, int target);
 
+//updates the variables of min, max and current
+void update_vars(int arr[], int* min, int* max, int* current, int target);
+
 /*************************Put functions declarations here**********************/
 
 
@@ -49,16 +52,35 @@ int search_shift_arr(int arr[], int n, int target) {
     if (arr[n] == target) {//assume that n is not the target
         return n;
     }
+    if (arr[min] == target) {//assume that min is not the target
+        return min;
+    }
     while (n > min) {
         if (arr[current] == target) { //check if we found the target
             return current;
         }
-        if (arr[current] > target) { //check where the target is
-            n = current; //move the max
-        } else {
-            min = current; //move the min
-        }
-        current = (min + n) / 2; //update the current
+        update_vars(arr, &min, &n, &current, target);
     }
     return -1; //we didn't find the target
+}
+
+void update_vars(int arr[], int* min, int* max, int* current, int target) {
+    if (arr[*current] <= arr[*max]) {
+        if (arr[*current] >= target) { //check where the target is
+            *max = *current; //move the max
+            *current = (*min + *max) / 2; //update the current
+        } else {
+            *min = *current; //move the min
+            *current = (*min + *max + 1) / 2; //update the current
+        }
+    } else {
+        //check where the target is
+        if (arr[*current] > target && arr[*min] <= target) {
+            *max = *current; //move the max
+            *current = (*min + *max) / 2; //update the current
+        } else {
+            *min = *current; //move the min
+            *current = (*min + *max + 1) / 2; //update the current
+        }
+    }
 }
