@@ -51,36 +51,39 @@ int main(void) {
 
 /*************************Functions implementations****************************/
 int k_closest_to_target(int arr[], int n, int target, int k) {
-    int index = binary_search(arr, n, target); //find the index of target
-    if (index == -1) {
-        return -1;
-    }//find the smallest valid item
-    if (index < k - 1) {
-        return arr[index + k - 1];
+    int index = binary_search(arr, n, target);
+    //printf("%d\n", arr[index]);
+    int left = index; //find the index of target
+    int right = index;
+    for (int i = 1; i < k; i++) {
+        if (left <= 0) {
+            return arr[right + k - i];
+        } else if (right >= n-1) {
+            return arr[left - k + i];
+        } else if (arr[right] - target < target - arr[left]) {
+            right++;
+        } else {
+            left--;
+        }
     }
-    if (index >= n - k + 1) {
-        return arr[index - k + 1];
-    }
-    if (arr[index + k - 1] > arr[index - k + 1]) {
-        return arr[index - k + 1];
-    } else {
-        return arr[index + k - 1];
-    }
+    return arr[left] > arr[right] ? arr[right] : arr[left];
 }
 
 int binary_search(int arr[], int n, int target) {
-    n = n - 1; //n would be the max in the binary search
-    int min = 0, current = n / 2; //0 is the min, current is in the middle
-    while (n > min) {
-        if (arr[current] == target) { //check if we found the target
+    int max = n - 1; //n would be the max in the binary search
+    int min = 0, current = max / 2; //0 is the min, current is in the middle
+    while (max >= min) {
+        current = (min + max) / 2;
+        if (arr[current] == target) {
             return current;
         }
-        if (arr[current] > target) { //check where the target is
-            n = current; //move the max
+        if (arr[current] < target) { //check where the target is
+            min = current + 1;
         } else {
-            min = current; //move the min
+            max = current - 1;
         }
-        current = (min + n) / 2; //update the current
     }
-    return min; //we didn't find the target
+    //we didn't find the target, return the closest to target
+    return n <= min + 1 ? min - 1:
+    target - arr[min] < arr[min+1] - target ? min : min + 1;
 }

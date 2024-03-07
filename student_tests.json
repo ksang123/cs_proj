@@ -1,164 +1,54 @@
 {
   "tests": [
     {
-      "name": "max int test",
-      "input": "3 2147483647 2 0 1 2147483647",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n1"
+      "name": "valid inputs Y win",
+      "input": "4 6 3 0 1 2 3 1 2 2",
+      "output": "Number of rows:\nNumber of columns:\nPlease enter k:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n| | | | | | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y| | | | | |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X| | | | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y| | | |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X| | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| |Y| | | | |\n|Y|X|Y|X| | |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| |Y|X| | | |\n|Y|X|Y|X| | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | |Y| | | |\n| |Y|X| | | |\n|Y|X|Y|X| | |\nPlayer Y won in 7 moves!"
     },
     {
-      "name": "very small int test",
-      "input": "3 -2000000000 2 -2000000000 0 2000000000",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n0"
+      "name": "valid and invalid inputs K too big, Draw",
+      "input": "4 6 8 0 1 2 3 4 5 6 7  0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7",
+      "output": "Number of rows:\nNumber of columns:\nPlease enter k:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n| | | | | | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y| | | | | |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X| | | | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y| | | |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X| | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y| |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y| | | | | |\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X| | | | |\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y| | | |\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X| | |\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y| |\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\n\n| | | | | | |\n|Y| | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n|Y|X| | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n|Y|X|Y| | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n|Y|X|Y|X| | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n|Y|X|Y|X|Y| |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\n\n|Y| | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n|Y|X| | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n|Y|X|Y| | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n|Y|X|Y|X| | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n|Y|X|Y|X|Y| |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nDRAW!"
     },
     {
-      "name": "very small int test 2",
-      "input": "3 -1000000000 3 -1000000000 0 2000000000",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n2000000000"
+      "name": "valid and invalid inputs K bigger than rows and cols, Draw",
+      "input": "4 6 7 0 1 2 3 4 5 6 7  0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7",
+      "output": "Number of rows:\nNumber of columns:\nPlease enter k:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n| | | | | | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y| | | | | |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X| | | | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y| | | |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X| | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y| |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y| | | | | |\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X| | | | |\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y| | | |\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X| | |\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y| |\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\n\n| | | | | | |\n|Y| | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n|Y|X| | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n|Y|X|Y| | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n|Y|X|Y|X| | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n|Y|X|Y|X|Y| |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\n\n|Y| | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n|Y|X| | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n|Y|X|Y| | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n|Y|X|Y|X| | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n|Y|X|Y|X|Y| |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nDRAW!"
     },
     {
-      "name": "array odd length in reaching left edge during middle of calc",
-      "input": "7 3 5 1 2 3 8 10 800 1000",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n10"
+      "name": "valid and invalid inputs, k is zero, Y win",
+      "input": "4 6 0 0 1 2 3 4 5 6 7  0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7",
+      "output": "Number of rows:\nNumber of columns:\nPlease enter k:\nError: k must be greater than zero, setting k to 4\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n| | | | | | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y| | | | | |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X| | | | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y| | | |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X| | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y| |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y| | | | | |\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X| | | | |\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y| | | |\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X| | |\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y| |\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\n\n| | | | | | |\n|Y| | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n|Y|X| | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n|Y|X|Y| | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n|Y|X|Y|X| | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n|Y|X|Y|X|Y| |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\n\n|Y| | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y won in 19 moves!"
     },
     {
-      "name": "array odd length in reaching left edge during middle of calc neg",
-      "input": "7 -100 4 -150 -100 -99 8 10 800 1000",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n8"
+      "name": "valid and invalid inputs, neg k, X win",
+      "input": "4 6 -1 0 1 2 3 4 5 6 7  0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 3 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7",
+      "output": "Number of rows:\nNumber of columns:\nPlease enter k:\nError: k must be greater than zero, setting k to 4\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n| | | | | | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y| | | | | |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X| | | | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y| | | |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X| | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y| |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y| | | | | |\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X| | | | |\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y| | | |\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X| | |\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y| |\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\n\n| | | | | | |\n|Y| | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n|Y|X| | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n|Y|X|Y| | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n|Y|X|Y|X| | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n|Y|X|Y|X|Y| |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\n\n| | | |Y| | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| |X| |Y| | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X won in 20 moves!"
     },
     {
-      "name": "array odd length in reaching right edge during middle of calc",
-      "input": "7 700 5 1 2 3 8 10 800 1000",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n3"
+      "name": "valid and invalid inputs, neg k, Draw",
+      "input": "4 6 -8 0 1 2 3 4 5 6 7  0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 3 0 1 2 5 4 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7",
+      "output": "Number of rows:\nNumber of columns:\nPlease enter k:\nError: k must be greater than zero, setting k to 4\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n| | | | | | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y| | | | | |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X| | | | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y| | | |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X| | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y| |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y| | | | | |\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X| | | | |\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y| | | |\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X| | |\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y| |\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\n\n| | | | | | |\n|Y| | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n|Y|X| | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n|Y|X|Y| | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n|Y|X|Y|X| | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | | | |\n|Y|X|Y|X|Y| |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | | | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\n\n| | | |Y| | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n|X| | |Y| | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n|X|Y| |Y| | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n|X|Y|X|Y| | |\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer Y, enter col:\n\n|X|Y|X|Y| |Y|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nPlayer X, enter col:\n\n|X|Y|X|Y|X|Y|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\n|Y|X|Y|X|Y|X|\nDRAW!"
     },
     {
-      "name": "array odd length in reaching right edge during middle of calc neg",
-      "input": "7 -2 4 -1500 -1000 -990 -100 -8 -2 -1",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n-100"
+      "name": "invalid inputs 1",
+      "input": "8 9 5 3 2  34 64 ",
+      "output": "Number of rows:\nError: Number of rows must be smaller than 8"
     },
     {
-      "name": "array odd length target not in arr neg",
-      "input": "7 -100 4 -150 -130 -99 8 10 800 1000",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n8"
+      "name": "invalid inputs 1",
+      "input": "5 9 5 3 2  34 64 ",
+      "output": "Number of rows:\nNumber of columns:\nError: Number of columns must be smaller than 8"
     },
     {
-      "name": "array odd length target not in arr neg 2",
-      "input": "7 -100 4 -150 -130 -99 -70 10 800 1000",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n-150"
+      "name": "test handle neg K value ",
+      "input": "3 6 -10 0 1 2 3 1 2 2",
+      "output": "Number of rows:\nNumber of columns:\nPlease enter k:\nError: k must be greater than zero, setting k to 3\n\n| | | | | | |\n| | | | | | |\n| | | | | | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y| | | | | |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X| | | | |\nPlayer Y, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y| | | |\nPlayer X, enter col:\n\n| | | | | | |\n| | | | | | |\n|Y|X|Y|X| | |\nPlayer Y, enter col:\n\n| | | | | | |\n| |Y| | | | |\n|Y|X|Y|X| | |\nPlayer X, enter col:\n\n| | | | | | |\n| |Y|X| | | |\n|Y|X|Y|X| | |\nPlayer Y, enter col:\n\n| | |Y| | | |\n| |Y|X| | | |\n|Y|X|Y|X| | |\nPlayer Y won in 7 moves!"
     },
     {
-      "name": "array odd length target not in arr neg 3",
-      "input": "7 -100 5 -150 -130 -99 -70 10 800 1000",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n10"
-    },
-    {
-      "name": "array odd length target first in arr",
-      "input": "9 1 5 1 130 999 1070 1100 8000 10000 10001 10002",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n1100"
-    },
-    {
-      "name": "array odd length target smaller than first in arr",
-      "input": "9 0 5 1 130 999 1070 1100 8000 10000 10001 10002",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n1100"
-    },
-    {
-      "name": "array odd length target last in arr",
-      "input": "9 10002 5 1 130 999 1070 1101 8000 10000 10001 10002",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n1101"
-    },
-    {
-      "name": "array odd length target larger than first in arr",
-      "input": "9 10003 5 1 130 999 1070 1110 8000 10000 10001 10002",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n1110"
-    },
-    {
-      "name": "array odd length same distance from target choose smaller num",
-      "input": "7 103 4 1 88 99 100 103 106 10000 10001 10002",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n99"
-    },
-    {
-      "name": "array odd length same distance choose smaller num",
-      "input": "7 103 5 1 88 98 100 102 103 106 108 10001",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n98"
-    },
-    {
-      "name": "array even length in reaching left edge during middle of calc",
-      "input": "8 3 5 1 2 3 8 10 800 1000 1001",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n10"
-    },
-    {
-      "name": "array even length in reaching left edge during middle of calc neg",
-      "input": "8 -100 4 -150 -100 -99 8 10 800 1000 1001",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n8"
-    },
-    {
-      "name": "array even length in reaching right edge during middle of calc",
-      "input": "6 700 5 1 2 3 8 650 800",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n2"
-    },
-    {
-      "name": "array even length in reaching right edge during middle of calc neg",
-      "input": "8 -2 4 -1500 -1000 -990 -100 -8 -3 -2 -1",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n-8"
-    },
-    {
-      "name": "array even length in reaching right edge during middle of calc neg choose smaller neg",
-      "input": "8 -2 3 -1500 -1000 -990 -100 -8 -3 -2 -1",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n-1"
-    },
-    {
-      "name": "array even length target not in arr neg",
-      "input": "8 -100 4 -150 -130 -99 -98 8 10 800 1000",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n-150"
-    },
-    {
-      "name": "array even length target not in arr neg do salsa",
-      "input": "8 -100 5 -150 -130 -99 -98 8 10 800 1000",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n8"
-    },
-    {
-      "name": "array even length target not in arr neg 2",
-      "input": "6 -100 4 -150 -130 -99 -70 10 800",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n-150"
-    },
-    {
-      "name": "array even length target not in arr neg 3",
-      "input": "6 -100 5 -150 -130 -99 -70 10 800",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n10"
-    },
-    {
-      "name": "array even length target first in arr",
-      "input": "10 1 5 1 130 999 1070 1100 8000 10000 10001 10002 10003",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n1100"
-    },
-    {
-      "name": "array even length target smaller than first in arr",
-      "input": "10 0 5 1 130 999 1070 1100 8000 10000 10001 10002 10003",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n1100"
-    },
-    {
-      "name": "array even length target last in arr",
-      "input": "8 10003 5 130 999 1070 1101 8000 10000 10001 10002",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n1101"
-    },
-    {
-      "name": "array even length target larger than first in arr",
-      "input": "8 10003 5 130 999 1070 1110 8000 10000 10001 10002",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n1110"
-    },
-    {
-      "name": "array even length same distance from target choose smaller num",
-      "input": "8 103 4 1 88 99 100 103 106 10000 10001 10002 10003",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n99"
-    },
-    {
-      "name": "array even length same distance choose smaller num",
-      "input": "8 103 5 1 88 98 100 102 103 106 108 10001 10002",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n98"
-    },
-    {
-      "name": "Ultimate Test (Thanks Ido :) )",
-      "input": "8 10 8 -50 -20 -10 0 5 21 29 45",
-      "output": "Please enter array length:\nPlease enter target number:\nPlease enter k:\nPlease enter sorted and uniq array:\n-50"
+      "name": "test handle neg K value, DRAW and invalid inputs ",
+      "input": "3 4 -10 0 1 2 3  6 0 1 2 3 5 1 2 3 0 4 1 2 3 0 0 1 2 3 -3 0 1 2 3  1 2 3 0  1 2 3 0 0 1 2 3  0 1 2 3  1 2 3 0  1 2 3 0 0 1 2 3  0 1 2 3  1 2 3 0  1 2 3 0 0 1 2 3  0 1 2 3  1 2 3 0  1 2 3 0 0 1 2 3  0 1 2 3  1 2 3 0  1 2 3 0 0 1 2 3  0 1 2 3  1 2 3 0  1 2 3 0",
+      "output": "Number of rows:\nNumber of columns:\nPlease enter k:\nError: k must be greater than zero, setting k to 3\n\n| | | | |\n| | | | |\n| | | | |\nPlayer Y, enter col:\n\n| | | | |\n| | | | |\n|Y| | | |\nPlayer X, enter col:\n\n| | | | |\n| | | | |\n|Y|X| | |\nPlayer Y, enter col:\n\n| | | | |\n| | | | |\n|Y|X|Y| |\nPlayer X, enter col:\n\n| | | | |\n| | | | |\n|Y|X|Y|X|\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\n\n| | | | |\n|Y| | | |\n|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | |\n|Y|X| | |\n|Y|X|Y|X|\nPlayer Y, enter col:\n\n| | | | |\n|Y|X|Y| |\n|Y|X|Y|X|\nPlayer X, enter col:\n\n| | | | |\n|Y|X|Y|X|\n|Y|X|Y|X|\nPlayer Y, enter col:\nInvalid input, try again\nPlayer Y, enter col:\n\n| |Y| | |\n|Y|X|Y|X|\n|Y|X|Y|X|\nPlayer X, enter col:\n\n| |Y|X| |\n|Y|X|Y|X|\n|Y|X|Y|X|\nPlayer Y, enter col:\n\n| |Y|X|Y|\n|Y|X|Y|X|\n|Y|X|Y|X|\nPlayer X, enter col:\n\n|X|Y|X|Y|\n|Y|X|Y|X|\n|Y|X|Y|X|\nDRAW!"
     }
   ]
 }
