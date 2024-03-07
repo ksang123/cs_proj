@@ -1,3 +1,5 @@
+//https://chat.openai.com/share/4d78ecd8-f935-4adb-85c5-ddd7e0ba440a
+
 #include <stdio.h>
 #include <string.h>
 
