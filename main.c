@@ -24,7 +24,7 @@ double midterm_q3(double arr[], int n, int idx);
 double add_to_sum(double arr[], int n, int idx, int index, double points);
 
 int main(void) {
-    int num = 4375;
+    int num = 0;
     printf("%d\n", midterm_q1(num));
     double arr[] = {-5.5, 0.0, 6.0};
     printf("%f\n", midterm_q2(arr, 3));
