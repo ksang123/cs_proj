@@ -13,7 +13,6 @@ char* swap(char str[], int idx1, int idx2) {
 }
 
 bool is_perm(char str1[], char str2[], int n) {
-    printf("%s\n", str1);
     if (strcmp(str1, str2) == 0) {
         return true;
     }
