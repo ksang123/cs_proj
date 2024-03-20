@@ -1,8 +1,35 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
+
+void swap(char str[], int idx1, int idx2) {
+    char temp = str[idx1];
+    str[idx1] = str[idx2];
+    str[idx2] = temp;
+}
+
+bool is_perm(char str1[], char str2[], int n) {
+    if (strcmp(str1, str2)) {
+        return true;
+    }
+    if (n == 0) {
+        return false;
+    }
+    for (int i = 0; i <= n; i++) {
+        swap(str1, i, n);
+        if (is_perm(str1, str2, n-1)) {
+            return true;
+        }
+    }
+    return false;
+}
 
 bool isPermutation(char str1[], char str2[]) {
-    return false;
+    int len1 = (int)strlen(str1), len2 = (int)strlen(str2);
+    if (len1 != len2) {
+        return false;
+    }
+    return is_perm(str1, str2, len1-1);
 }
 
 int main(void) {
