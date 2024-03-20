@@ -21,6 +21,7 @@ bool is_perm(char str1[], char str2[], int n) {
         if (is_perm(str1, str2, n-1)) {
             return true;
         }
+        swap(str1, i, n);
     }
     return false;
 }
