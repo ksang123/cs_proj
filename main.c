@@ -9,11 +9,9 @@ void swap(char str[], int idx1, int idx2) {
 }
 
 bool is_perm(char str1[], char str2[], int n) {
-    if (strcmp(str1, str2)) {
-        printf("wtf");
+    if (strcmp(str1, str2) == 0) {
         return true;
     }
-    printf("not equal");
     if (n == 0) {
         return false;
     }
