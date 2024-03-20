@@ -44,7 +44,7 @@ int main(void) {
 
     scanf("%s", str2);
 
-    strcpy(str3, str1);
+    snprintf(str3, 100, "%s", str1);
 
     if (isPermutation(str1, str2))
         printf("Yes, '%s' is a permutation of '%s'.\n", str3, str2);
