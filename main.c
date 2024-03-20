@@ -16,14 +16,14 @@ bool is_perm(char str1[], char str2[], int n, char or[]) {
     if (n == 0) {
         return false;
     }
-    snprintf(or, strlen(str1)+1, "%s", str1);
+//    snprintf(or, strlen(str1)+1, "%s", str1);
     for (int i = 0; i <= n; i++) {
         swap(str1, i, n);
         if (is_perm(str1, str2, n-1, or)) {
-            snprintf(str1, strlen(str1)+1, "%s", or);
+//            snprintf(str1, strlen(str1)+1, "%s", or);
             return true;
         }
-        snprintf(str1, strlen(str1)+1, "%s", or);
+//        snprintf(str1, strlen(str1)+1, "%s", or);
     }
     return false;
 }
