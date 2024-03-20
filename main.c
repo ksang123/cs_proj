@@ -119,7 +119,7 @@ void encryptSwiftyWord(char *songLyrics[], int wordIdxs[], int k,
         int len = (int)strlen(songLyrics[wordIdxs[i]]);
         for (int j = 0; j < len; j++) {
             songLyrics[wordIdxs[i]][j] = (char)taylorCipherKey[
-                    songLyrics[wordIdxs[i]][j] - 'a' + 1];
+                    songLyrics[wordIdxs[i]][j] - 'a'];
         }
     }
 }
