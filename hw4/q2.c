@@ -9,16 +9,16 @@ int main(void)
     if (complexity == 't'){
         switch (question) {
             case 1:
-                printf("The time complexity of f1 is: %s\n" , "a");
+                printf("The time complexity of f1 is: %s\n" , "g");
                 break;
             case 2:
-                printf("The time complexity of f2 is: %s\n" , "a");
+                printf("The time complexity of f2 is: %s\n" , "c");
                 break;
             case 3:
-                printf("The time complexity of f3 is: %s\n" , "a");
+                printf("The time complexity of f3 is: %s\n" , "c");
                 break;
             case 4:
-                printf("The time complexity of f4 is: %s\n" , "a");
+                printf("The time complexity of f4 is: %s\n" , "c");
                 break;
             default:
                 printf("Error!\n");
@@ -31,7 +31,7 @@ int main(void)
                 printf("The space complexity of f1 is: %s\n" , "a");
                 break;
             case 2:
-                printf("The space complexity of f2 is: %s\n" , "a");
+                printf("The space complexity of f2 is: %s\n" , "g");
                 break;
             case 3:
                 printf("The space complexity of f3 is: %s\n" , "a");
