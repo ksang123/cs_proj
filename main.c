@@ -87,7 +87,7 @@ int readSongLyrics(char* songLyrics[], int songMaxSize, int wordMaxLen) {
 }
 
 void releaseMemory(char *songLyrics[], int songSize) {
-    for (int i = 0; i < songSize; i++) {
+    for (int i = 0; i <= songSize; i++) {
         free(songLyrics[i]);
     }
 }
