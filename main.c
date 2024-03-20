@@ -38,16 +38,18 @@ bool isPermutation(char str1[], char str2[]) {
 }
 
 int main(void) {
-    char str1[100], str2[100];
+    char str1[100], str2[100], str3[100];
 
     scanf("%s", str1);
 
     scanf("%s", str2);
 
+    strcpy(str3, str1);
+
     if (isPermutation(str1, str2))
-        printf("Yes, '%s' is a permutation of '%s'.\n", str1, str2);
+        printf("Yes, '%s' is a permutation of '%s'.\n", str3, str2);
     else
-        printf("No, '%s' is not a permutation of '%s'.\n", str1, str2);
+        printf("No, '%s' is not a permutation of '%s'.\n", str3, str2);
 
     return 0;
 }
