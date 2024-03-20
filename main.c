@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
+#include <stdlib.h>
 
-void swap(char str[], int idx1, int idx2) {
-    char temp = str[idx1];
-    str[idx1] = str[idx2];
-    str[idx2] = temp;
+char* swap(char str[], int idx1, int idx2) {
+    char* str1 = (char*) malloc(sizeof(char) * strlen(str));
+    strcpy(str1, str);
+    char temp = str1[idx1];
+    str1[idx1] = str1[idx2];
+    str1[idx2] = temp;
+    return str1;
 }
 
 bool is_perm(char str1[], char str2[], int n) {
@@ -17,8 +21,7 @@ bool is_perm(char str1[], char str2[], int n) {
         return false;
     }
     for (int i = 0; i <= n; i++) {
-        swap(str1, i, n);
-        if (is_perm(str1, str2, n-1)) {
+        if (is_perm(swap(str1, i, n), str2, n-1)) {
             return true;
         }
     }
