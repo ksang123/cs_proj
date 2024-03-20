@@ -22,7 +22,7 @@ bool is_perm(char str1[], char str2[], int n, char or[]) {
         if (is_perm(str1, str2, n-1, or)) {
             return true;
         }
-
+        snprintf(str1, strlen(str1), "%s", or);
     }
     return false;
 }
