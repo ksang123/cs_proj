@@ -9,8 +9,24 @@
 
 /* Function Declarations */
 void printSong(char *songLyrics[], int songSize);
+
+/** @brief take a song as input
+ * @returns the amount of words in the song
+ */
 int readSongLyrics(char *songLyrics[], int songMaxSize, int wordMaxLen);
+
+/**
+ * @brief the function releases the memory used by the lyrics array
+ */
 void releaseMemory(char *songLyrics[], int songSize);
+
+/**
+ *
+ * @param songLyrics
+ * @param songSize
+ * @param k
+ * @return
+ */
 int* findSwiftyWordIndexes(char *songLyrics[], int songSize, int k);
 void encryptSwiftyWord(char *songLyrics[], int wordIdxs[], int k,
 unsigned char taylorCipherKey[ABC_SIZE]);
@@ -65,7 +81,7 @@ int main(void)
 int readSongLyrics(char* songLyrics[], int songMaxSize, int wordMaxLen) {
     int word_counter = 0, len;
     char* word = (char *)malloc(wordMaxLen * sizeof(char));
-    while (word_counter < songMaxSize && scanf("%s", word) != -1) // || add empty input)
+    while (word_counter < songMaxSize && scanf("%s", word) != -1)
     {
         len = (int)strlen(word);
         word[len] = ' ';
@@ -116,8 +132,8 @@ int find_word_k(char *songLyrics[], int songSize, int k) {
 void encryptSwiftyWord(char *songLyrics[], int wordIdxs[], int k,
                        unsigned char taylorCipherKey[ABC_SIZE]) {
     for (int i = 0; i < k; i++) {
-        int len = (int)strlen(songLyrics[wordIdxs[i]]);
-        for (int j = 0; j < len - 1; j++) {
+        int len = (int)strlen(songLyrics[wordIdxs[i]]) - 1;
+        for (int j = 0; j < len; j++) {
             songLyrics[wordIdxs[i]][j] = (char)taylorCipherKey[
                     songLyrics[wordIdxs[i]][j] - 'a'];
         }
