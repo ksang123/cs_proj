@@ -10,6 +10,7 @@ void swap(char str[], int idx1, int idx2) {
 
 bool is_perm(char str1[], char str2[], int n) {
     if (strcmp(str1, str2)) {
+        printf("wtf");
         return true;
     }
     printf("not equal");
