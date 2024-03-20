@@ -13,7 +13,7 @@ bool is_perm(char str1[], char str2[], int n) {
     if (strcmp(str1, str2) == 0) {
         return true;
     }
-    if (n == 0) {
+    if (n == 1) {
         return false;
     }
     for (int i = 0; i <= n; i++) {
