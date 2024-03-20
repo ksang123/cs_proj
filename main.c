@@ -67,13 +67,18 @@ int readSongLyrics(char* songLyrics[], int songMaxSize, int wordMaxLen) {
     char* word = (char *)malloc(wordMaxLen * sizeof(char));
     if (word == NULL) {
         printf("memory allocation failed");
+        return 0;
     }
     while (word_counter < songMaxSize && scanf("%s", word) != -1) // || add empty input)
     {
         len = (int)strlen(word);
-        word[len-1] = ' ';
-        word[len] = '\0';
+        word[len] = ' ';
+        word[len+1] = '\0';
         songLyrics[word_counter] = (char *)malloc((len + 1) * sizeof(char));
+        if (songLyrics[word_counter] == NULL) {
+            printf("memory allocation failed");
+            return 0;
+        }
         strcpy(songLyrics[word_counter], word);
         word_counter++;
     }
