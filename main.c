@@ -12,6 +12,7 @@ bool is_perm(char str1[], char str2[], int n) {
     if (strcmp(str1, str2)) {
         return true;
     }
+    printf("not equal");
     if (n == 0) {
         return false;
     }
