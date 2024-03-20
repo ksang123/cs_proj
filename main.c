@@ -3,24 +3,23 @@
 #include <string.h>
 #include <stdlib.h>
 
-char* swap(char str[], int idx1, int idx2) {
-    char* str1 = (char*) malloc(sizeof(char) * strlen(str));
-    strcpy(str1, str);
-    char temp = str1[idx1];
-    str1[idx1] = str1[idx2];
-    str1[idx2] = temp;
-    return str1;
+void swap(char str[], int idx1, int idx2) {
+    char temp = str[idx1];
+    str[idx1] = str[idx2];
+    str[idx2] = temp;
 }
 
-bool is_perm(char str1[], char str2[], int n) {
+bool is_perm(char str1[], char str2[], int n, char or[]) {
     if (strcmp(str1, str2) == 0) {
         return true;
     }
     if (n == 0) {
         return false;
     }
+    snprintf(or, strlen(str1), "%s", str1);
     for (int i = 0; i <= n; i++) {
-        if (is_perm(swap(str1, i, n), str2, n-1)) {
+        swap(str1, i, n);
+        if (is_perm(str1, str2, n-1, or)) {
             return true;
         }
     }
@@ -32,7 +31,10 @@ bool isPermutation(char str1[], char str2[]) {
     if (len1 != len2) {
         return false;
     }
-    return is_perm(str1, str2, len1-1);
+    char* str = (char*) malloc(sizeof(char) * strlen(str1));
+    bool is_permutation = is_perm(str1, str2, len1-1, str);
+    free(str);
+    return is_permutation;
 }
 
 int main(void) {
