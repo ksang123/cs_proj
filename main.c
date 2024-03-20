@@ -63,7 +63,7 @@ int main(void)
 /* Your Implementation: */
 int readSongLyrics(char* songLyrics[], int songMaxSize, int wordMaxLen) {
     int word_counter = 0;
-    int len = 0;
+    int len;
     char* word = (char *)malloc(wordMaxLen * sizeof(char));
     if (word == NULL) {
         printf("memory allocation failed\n");
@@ -74,7 +74,7 @@ int readSongLyrics(char* songLyrics[], int songMaxSize, int wordMaxLen) {
         len = (int)strlen(word);
         word[len] = ' ';
         word[len+1] = '\0';
-        songLyrics[word_counter] = (char *)malloc((len + 1) * sizeof(char));
+        songLyrics[word_counter] = (char *)malloc((len) * sizeof(char));
         if (songLyrics[word_counter] == NULL) {
             printf("memory allocation failed\n");
             return 0;
@@ -87,7 +87,7 @@ int readSongLyrics(char* songLyrics[], int songMaxSize, int wordMaxLen) {
 }
 
 void releaseMemory(char *songLyrics[], int songSize) {
-    for (int i = 0; i <= songSize; i++) {
+    for (int i = 0; i < songSize; i++) {
         free(songLyrics[i]);
     }
 }
