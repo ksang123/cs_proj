@@ -10,7 +10,7 @@
 /* Function Declarations */
 void printSong(char *songLyrics[], int songSize);
 int readSongLyrics(char *songLyrics[], int songMaxSize, int wordMaxLen);
-//void releaseMemory(char *songLyrics[], int songSize);
+void releaseMemory(char *songLyrics[], int songSize);
 //int* findSwiftyWordIndexes(char *songLyrics[], int songSize, int k);
 //void encryptSwiftyWord(char *songLyrics[], int wordIdxs[], int k,
 //unsigned char taylorCipherKey[ABC_SIZE]);
@@ -55,7 +55,7 @@ int main(void)
 
     // Release all dynamically allocated memory
 //    free(wordIdxs);
-//    releaseMemory(songLyrics, songSize);
+    releaseMemory(songLyrics, songSize);
 
     return 0;
 }
@@ -66,7 +66,7 @@ int readSongLyrics(char* songLyrics[], int songMaxSize, int wordMaxLen) {
     int len = 0;
     char* word = (char *)malloc(wordMaxLen * sizeof(char));
     if (word == NULL) {
-        printf("memory allocation failed");
+        printf("memory allocation failed\n");
         return 0;
     }
     while (word_counter < songMaxSize && scanf("%s", word) != -1) // || add empty input)
@@ -76,7 +76,7 @@ int readSongLyrics(char* songLyrics[], int songMaxSize, int wordMaxLen) {
         word[len+1] = '\0';
         songLyrics[word_counter] = (char *)malloc((len + 1) * sizeof(char));
         if (songLyrics[word_counter] == NULL) {
-            printf("memory allocation failed");
+            printf("memory allocation failed\n");
             return 0;
         }
         strcpy(songLyrics[word_counter], word);
@@ -84,4 +84,10 @@ int readSongLyrics(char* songLyrics[], int songMaxSize, int wordMaxLen) {
     }
     free(word);
     return word_counter;
+}
+
+void releaseMemory(char *songLyrics[], int songSize) {
+    for (int i = 0; i < songSize; i++) {
+        free(songLyrics[i]);
+    }
 }
