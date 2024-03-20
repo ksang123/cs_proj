@@ -69,6 +69,7 @@ int readSongLyrics(char* songLyrics[], int songMaxSize, int wordMaxLen) {
     }
     while (word_counter < songMaxSize && scanf("%s", word) != -1) // || add empty input)
     {
+        printf("%s", songLyrics[word_counter]);
         strcpy(songLyrics[word_counter], word);
         word_counter++;
     }
