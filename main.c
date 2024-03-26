@@ -34,7 +34,7 @@ char* int2string(int num) {
     return result;
 }
 
-int main() {
+int main(void) {
     int num;
     printf("Enter a number: ");
     scanf("%d", &num);
