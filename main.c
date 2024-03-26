@@ -11,7 +11,7 @@ const char* tens[] = {
         "Ninety"
 };
 char* int2string(int num) {
-    printf("%d", num);
+    printf("%d\n", num);
     // Assuming the result will fit within 100 characters
     static char result[100];
     memset(result, 0, sizeof(result)); // Initialize the result string
