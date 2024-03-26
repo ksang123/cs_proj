@@ -9,7 +9,7 @@ int main(void)
     if (complexity == 't'){
         switch (question) {
             case 1:
-                printf("The time complexity of f1 is: %s\n" , "g");
+                printf("The time complexity of f1 is: %s\n" , "c");
                 break;
             case 2:
                 printf("The time complexity of f2 is: %s\n" , "c");
