@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+
 const char* one2twenty[] = {
         "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine",
         "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen",
@@ -14,10 +15,10 @@ char* int2string(int num) {
     static char result[100];
     memset(result, 0, sizeof(result)); // Initialize the result string
     if (num == 0) {
-        return "";
+        return "Zero";
     }
     if (num < 20) {
-        sprintf(result, "%s ", one2twenty[num - 1]);
+        sprintf(result, "%s", one2twenty[num - 1]);
         return result;
     }
     if (num < 100) {
@@ -29,9 +30,13 @@ char* int2string(int num) {
                 int2string(num % 100));
         return result;
     }
-    sprintf(result, "%s Thousand %s", one2twenty[num / 1000 - 1],
-            int2string(num % 1000));
-    return result;
+    if (num < 10000) {
+        sprintf(result, "%s Thousand %s", int2string(num / 1000),
+                int2string(num % 1000));
+        return result;
+    }
+    // Add support for larger numbers here if needed
+    return "Number too large";
 }
 
 int main(void) {
