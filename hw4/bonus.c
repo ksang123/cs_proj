@@ -4,14 +4,14 @@
 #include <string.h>
 
 char* int2string(int num) {
-    const char* one2twenty[] = {
+    char* one2twenty[] = {
             "One", "Two", "Three", "Four", "Five",
             "Six", "Seven", "Eight", "Nine",
             "Ten", "Eleven", "Twelve", "Thirteen",
             "Fourteen", "Fifteen", "Sixteen",
             "Seventeen", "Eighteen", "Nineteen"
     };
-    const char* tens[] = {
+    char* tens[] = {
             "Twenty", "Thirty", "Forty", "Fifty",
             "Sixty", "Seventy", "Eighty","Ninety"
     };
