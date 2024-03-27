@@ -12,7 +12,7 @@ void merge(int* arr, int r, int l) {
 }
 
 void merge_sort(int* arr, int r, int l) {
-    
+
 }
 
 int main(void) {
@@ -27,7 +27,7 @@ int main(void) {
     merge_sort(arr, 0, n);
     printf("\n");
     for (int i = 0; i < n; ++i) {
-        printf("%d", arr[i]);
+        printf("%d, ", arr[i]);
     }
     free(arr);
     return 0;
