@@ -17,10 +17,8 @@ void merge_sort(int* arr, int r, int l) {
 
 int main(void) {
     int n = 0;
-    printf("Please enter array length:\n");
     scanf("%d",&n);
     int* arr = (int *) malloc(n * sizeof(int));
-    printf("Please enter shifted array:\n");
     for (int i = 0; i < n; ++i) {
         scanf("%d",&arr[i]);
     }
