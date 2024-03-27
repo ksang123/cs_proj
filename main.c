@@ -7,12 +7,17 @@ void swap(int* arr, int a, int b) {
     arr[b] = temp;
 }
 
-void merge(int* arr, int r, int l) {
+void merge(int* arr, int l, int m, int r) {
 
 }
 
-void merge_sort(int* arr, int r, int l) {
-
+void merge_sort(int* arr, int l, int r) {
+    if (l < r) {
+        int m = l + (r - l) / 2;
+        merge_sort(arr, l, m);
+        merge_sort(arr, m+1, r);
+        merge(arr, l, m, r);
+    }
 }
 
 int main(void) {
@@ -23,7 +28,6 @@ int main(void) {
         scanf("%d",&arr[i]);
     }
     merge_sort(arr, 0, n);
-    printf("\n");
     for (int i = 0; i < n; ++i) {
         printf("%d, ", arr[i]);
     }
