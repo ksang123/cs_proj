@@ -15,7 +15,7 @@ int main(void)
                 printf("The time complexity of f2 is: %s\n" , "c");
                 break;
             case 3:
-                printf("The time complexity of f3 is: %s\n" , "c");
+                printf("The time complexity of f3 is: %s\n" , "b");
                 break;
             case 4:
                 printf("The time complexity of f4 is: %s\n" , "c");
@@ -31,7 +31,7 @@ int main(void)
                 printf("The space complexity of f1 is: %s\n" , "a");
                 break;
             case 2:
-                printf("The space complexity of f2 is: %s\n" , "g");
+                printf("The space complexity of f2 is: %s\n" , "e");
                 break;
             case 3:
                 printf("The space complexity of f3 is: %s\n" , "a");
