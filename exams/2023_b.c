@@ -6,7 +6,7 @@ int search(int arr[], int n, int target);
 
 int main(void) {
     int arr[] = {1,3,4,5,7,9,10};
-    printf("%d",q2(arr, 7, 3, 5));
+    printf("%b",q2(arr, 7, 3, 5));
     return 0;
 }
 
