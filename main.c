@@ -5,8 +5,8 @@ bool q2(int arr[], int n, int min, int max);
 int search(int arr[], int n, int target);
 
 int main(void) {
-    int arr[] = {1,3,4,5,7,9,10};
-    printf("%d\n",q2(arr, 7, 3, 5));
+    int arr[] = {72};
+    printf("%d\n",q2(arr, 1, 72, 72));
     return 0;
 }
 
