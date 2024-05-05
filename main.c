@@ -3,6 +3,7 @@
 
 bool q2(int arr[], int n, int min, int max);
 int search(int arr[], int n, int target);
+int q3(int* a[], int n, int m);
 
 int main(void) {
     int arr[] = {72};

@@ -3,10 +3,11 @@
 
 bool q2(int arr[], int n, int min, int max);
 int search(int arr[], int n, int target);
+int q3(int* a[], int n, int m);
 
 int main(void) {
-    int arr[] = {1,3,4,5,7,9,10};
-    printf("%b",q2(arr, 7, 3, 5));
+    int arr[] = {72};
+    printf("%d\n",q2(arr, 1, 72, 72));
     return 0;
 }
 
@@ -15,7 +16,7 @@ bool q2(int arr[], int n, int min, int max) {
     if (start == -1) {
         return false;
     }
-    return arr[start + min - max] == max;
+    return arr[start - min + max] == max;
 }
 
 int search(int arr[], int n, int target) {
