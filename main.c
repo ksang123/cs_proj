@@ -15,6 +15,7 @@ bool q2(int arr[], int n, int min, int max) {
     if (start == -1) {
         return false;
     }
+    printf("%d\n", start);
     printf("%d\n", arr[start + min - max]);
     printf("%d\n", max - min);
     return arr[start - min + max] == max - min;
