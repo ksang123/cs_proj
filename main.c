@@ -1,30 +1,38 @@
 #include <stdio.h>
 
-int q2(double arr[], int n) {
-    int low = 0, mid, high = n - 1;
-    while (low <= high) {
-        mid = (low + high) / 2;
-        if (mid < 1) {
-            low = mid + 1;
-        } else {
-            if (arr[mid - 1] <= 0 && arr[mid] > 0) {
-                return mid;
-            }
-            if (arr[mid] <= 0) {
-                low = mid + 1;
-            } else {
-                high = mid - 1;
+void swap(char* p1, char* p2) {
+    char temp = *p1;
+    *p1 = *p2;
+    *p2 = temp;
+}
+
+int weight(char* s) {
+    int w = 0;
+    while (*s) {
+        w += *s;
+        s++;
+    }
+    return w;
+}
+
+void q3(char* s[], int n) {
+    int k = 0;
+    for (int w = 0; w <= 10*127; w++) {
+        for(int i = 0; i < n; i++) {
+            if(weight(s[i]) == w) {
+                swap(s[k], s[i]);
+                k++;
             }
         }
     }
-    return -1;
 }
-
-
 
 int main(void) {
-    double arr[] = {0, 1, 2, -2, 1, 8};
-    printf("%d", q2(arr, 4));
+    char* arr[] = {"100", "53", "0", "0000"};
+    int arr_length = sizeof(arr) / sizeof(arr[0]);
+    q3(arr, arr_length);
+    for (int i = 0; i < arr_length; i++) {
+        printf("%s\n", arr[i]);
+    }
     return 0;
 }
-
