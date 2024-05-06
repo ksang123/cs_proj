@@ -23,7 +23,7 @@ int q2(double arr[], int n) {
 
 
 int main(void) {
-    double arr[] = {-6.6, -1, -2.5, 0.01};
+    double arr[] = {0, 1, 2, -2, 1, 8};
     printf("%d", q2(arr, 4));
     return 0;
 }
