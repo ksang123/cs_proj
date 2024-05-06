@@ -35,7 +35,7 @@ int main(void) {
     int arr_length = sizeof(arr) / sizeof(arr[0]);
     q3(arr, arr_length);
     for (int i = 0; i < arr_length; i++) {
-        printf("%s\n", arr[i]);
+        printf("%s, ", arr[i]);
     }
     return 0;
 }
