@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-void swap(char* p1, char* p2) {
-    char temp = *p1;
+void swap(char** p1, char** p2) {
+    char* temp = *p1;
     *p1 = *p2;
     *p2 = temp;
 }
@@ -20,10 +20,10 @@ void q3(char* s[], int n) {
     for (int w = 0; w <= 10 * 127; w++) {
         for (int i = 0; i < n; i++) {
             if (weight(s[i]) == w) {
-                char* temp = s[k];
-                s[k] = s[i];
-                s[i] = temp;
-//                swap(s[k], s[i]);
+//                char* temp = s[k];
+//                s[k] = s[i];
+//                s[i] = temp;
+                swap(&s[k], &s[i]);
                 k++;
             }
         }
