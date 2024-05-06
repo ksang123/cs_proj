@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int q2(double arr[], int n) {
     int low = 0, mid, high = n - 1;
     while (low <= high) {
@@ -19,12 +17,3 @@ int q2(double arr[], int n) {
     }
     return -1;
 }
-
-
-
-int main(void) {
-    double arr[] = {-1, 0, 1, 5};
-    printf("%d", q2(arr, 4));
-    return 0;
-}
-
