@@ -17,9 +17,9 @@ int weight(char* s) {
 
 void q3(char* s[], int n) {
     int k = 0;
-    for (int w = 0; w <= 10*127; w++) {
-        for(int i = 0; i < n; i++) {
-            if(weight(s[i]) == w) {
+    for (int w = 0; w <= 10 * 127; w++) {
+        for (int i = 0; i < n; i++) {
+            if (weight(s[i]) == w) {
                 swap(s[k], s[i]);
                 k++;
             }
