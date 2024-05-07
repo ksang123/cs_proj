@@ -13,7 +13,7 @@ int find_mistake(int dist[], int n) {
             if (dist[mid] > dist[high]) {
                 high = mid - 1;
             } else {
-                low = mid - 1;
+                low = mid + 1;
             }
         }
     }
