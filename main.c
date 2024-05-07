@@ -16,7 +16,7 @@ void hawaii1(int m, int from, int to) {
     hawaii1(m-1, from, to);
     movered(from, via);
     hawaii1(m-1, to, via);
-    movewhite(to, from);
+    movewhite(from, to);
     hawaii1(m-1, via, from);
     movered(via, to);
 }
