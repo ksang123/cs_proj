@@ -38,35 +38,29 @@ void bubble_sort(int a[], int n) {
     }
 }
 
-void merge(int a[], int na, int b[], int nb, int c[]) {
-    int ia = 0, ib = 0, ic = 0;
-    while (ia < na && ib < nb) {
-        if (a[ia] < b[ib]) {
+void merge(int a[], int na, int b[], int nb, int c[])
+{
+    int ia, ib, ic;
+    for(ia = ib = ic = 0; (ia < na) && (ib < nb); ic++)
+    {
+        if(a[ia] < b[ib]) {
             c[ic] = a[ia];
             ia++;
-        } else {
+        }
+        else {
             c[ic] = b[ib];
             ib++;
         }
     }
-    while (ia < na) {
-        c[ic++] = a[ia++];
-    }
-    while (ib < nb) {
-        c[ic++] = b[ib++];
-    }
+    for(;ia < na; ia++, ic++) c[ic] = a[ia];
+    for(;ib < nb; ib++, ic++) c[ic] = b[ib];
 }
 
 //Merge-Sort O(n*log(n))
 int merge_sort(int arr[], int n) {
     int len;
     int *temp_array, *base;
-
     temp_array = (int*)malloc(sizeof(int)*n);
-    if (temp_array == NULL) {
-        printf("dynamic allocation error in merge_sort");
-        return 1;
-    }
     for (len = 1; len < n; len *= 2) {
         for (base = arr; base < arr + n; base += 2 * len) {
             merge(base, len, base + len, len, temp_array);
