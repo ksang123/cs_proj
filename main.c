@@ -8,7 +8,7 @@ int find_mistake(int dist[], int n) {
             low += 1;
         } else {
             if (dist[mid - 1] < dist[mid]) {
-                return mid - 1;
+                return mid;
             }
             if (dist[mid] > dist[high]) {
                 high = mid - 1;
@@ -21,7 +21,7 @@ int find_mistake(int dist[], int n) {
 }
 
 int main(void) {
-    int a[] = {20, 19, 18, 17, 16, 23, 21, 19, 21};
+    int a[] = {20, 19, 18, 17, 24, 23, 21, 19, 21};
     printf("%d\n", find_mistake(a, 9));
     return 0;
 }
