@@ -38,6 +38,6 @@ void hawaii2(int m, int from, int to) {
 
 
 int main(void) {
-    hawaii2(2, 3, 2);
+    hawaii2(2, 1, 3);
     return 0;
 }
