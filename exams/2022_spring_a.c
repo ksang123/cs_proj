@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int find_mistake(int dist[], int n) {
     int low = 0, mid, high = n - 1;
     while (low <= high) {
@@ -6,12 +8,12 @@ int find_mistake(int dist[], int n) {
             low += 1;
         } else {
             if (dist[mid - 1] < dist[mid]) {
-                return mid - 1;
+                return mid;
             }
             if (dist[mid] > dist[high]) {
                 high = mid - 1;
             } else {
-                low = mid - 1;
+                low = mid + 1;
             }
         }
     }
