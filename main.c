@@ -29,6 +29,6 @@ int printSolution(int a[], int n, int b, int idx, int x[]) {
 int main(void) {
     int a[] = {3, 4, 6, 2};
     int x[4] = {0};
-    printf("%d\n", printSolution(a, 4, 26, 0, x));
+    printf("%d\n", printSolution(a, 4, 2, 0, x));
     return 0;
 }
