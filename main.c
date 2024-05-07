@@ -21,7 +21,7 @@ int find_mistake(int dist[], int n) {
 }
 
 int main(void) {
-    int a[] = {20, 19, 18, 17, 16, 15, 21, 19, 21};
+    int a[] = {20, 21, 18, 17, 16, 15, 21, 19, 21};
     printf("%d\n", find_mistake(a, 1));
     return 0;
 }
