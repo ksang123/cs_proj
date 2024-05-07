@@ -4,8 +4,8 @@
 //Merge-Sort O(n*log(n))
 //place- O(n)
 void merge(int a[], int na, int b[], int nb, int c[]) {
-    int ia = 0, ib = 0, ic = 0;
-    while (ia < na && ib < nb) {
+    int ia, ib, ic;
+    for(ia = ib = ic = 0; (ia < na) && (ib < nb); ic++) {
         if (a[ia] < b[ib]) {
             c[ic] = a[ia];
             ia++;
@@ -14,11 +14,11 @@ void merge(int a[], int na, int b[], int nb, int c[]) {
             ib++;
         }
     }
-    while (ia < na) {
-        c[ic++] = a[ia++];
+    for (; ia < na; ia++, ic++) {
+        c[ic] = a[ia];
     }
-    while (ib < nb) {
-        c[ic++] = b[ib++];
+    for (; ib < nb; ib++, ic++) {
+        c[ic] = b[ib];
     }
 }
 
