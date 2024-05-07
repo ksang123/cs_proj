@@ -30,6 +30,7 @@ void merge_sort(int arr[], int n) {
             memcpy(base, temp_arr, 2 * len * sizeof(int));
         }
     }
+    free(temp_arr);
 }
 
 
