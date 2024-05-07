@@ -33,7 +33,8 @@ void hawaii2(int m, int from, int to) {
     movewhite(from, to);
     hawaii1(m - 1, via, to);
     movered(via, from);
-    hawaii2(m - 1, to, from);
+    hawaii1(m - 1, to, from);
+    hawaii2(m - 1, from, to);
 }
 
 
