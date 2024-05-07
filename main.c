@@ -24,6 +24,6 @@ void hawaii1(int m, int from, int to) {
 
 
 int main(void) {
-    hawaii1(2, 1, 3);
+    hawaii1(4, 3, 2);
     return 0;
 }
