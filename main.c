@@ -22,8 +22,22 @@ void hawaii1(int m, int from, int to) {
     hawaii1(m-1, from, to);
 }
 
+void hawaii2(int m, int from, int to) {
+    if (m == 0) {
+        return;
+    }
+    int via = 6 - from - to;
+    hawaii2(m - 1, from, to);
+    movered(from, via);
+    hawaii2(m - 1, to, via);
+    movewhite(from, to);
+    hawaii2(m - 1, via, to);
+    movered(via, from);
+    hawaii2(m - 1, to, from);
+}
+
 
 int main(void) {
-    hawaii1(4, 3, 2);
+    hawaii2(2, 3, 2);
     return 0;
 }
