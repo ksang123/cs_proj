@@ -27,11 +27,11 @@ void hawaii2(int m, int from, int to) {
         return;
     }
     int via = 6 - from - to;
-    hawaii2(m - 1, from, to);
+    hawaii1(m - 1, from, to);
     movered(from, via);
-    hawaii2(m - 1, to, via);
+    hawaii1(m - 1, to, via);
     movewhite(from, to);
-    hawaii2(m - 1, via, to);
+    hawaii1(m - 1, via, to);
     movered(via, from);
     hawaii2(m - 1, to, from);
 }
