@@ -29,7 +29,7 @@ void hawaii2(int m, int from, int to) {
     int via = 6 - from - to;
     hawaii2(m - 1, from, to);
     movered(from, via);
-    hawaii2(m - 1, to, via);
+    hawaii2(m - 1, from, via);
     movewhite(from, to);
     hawaii2(m - 1, via, to);
     movered(via, from);
