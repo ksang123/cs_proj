@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int find_mistake(int dist[], int n) {
     int low = 0, mid, high = n - 1;
     while (low <= high) {
@@ -18,10 +16,4 @@ int find_mistake(int dist[], int n) {
         }
     }
     return -1;
-}
-
-int main(void) {
-    int a[] = {20, 19, 18, 17, 24, 23, 21, 19, 21};
-    printf("%d\n", find_mistake(a, 9));
-    return 0;
 }
