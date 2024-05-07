@@ -20,9 +20,3 @@ void hawaii1(int m, int from, int to) {
     hawaii1(m-1, via, from);
     movered(via, to);
 }
-
-
-int main(void) {
-    hawaii1(2, 1, 3);
-    return 0;
-}
