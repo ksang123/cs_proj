@@ -1,5 +1,19 @@
-#include <stdio.h>
 #define LETTERS 'z' - 'a' + 1
+
+int index_of_equal(int a[], int n) {
+    int after = 0, b4 = 0;
+    for (int i = 0; i < n; i++) {
+        after += a[i];
+    }
+    for (int i = 0; i < n; i++) {
+        if (b4 == after - a[i]) {
+            return i;
+        }
+        after -= a[i];
+        b4 += a[i];
+    }
+    return -1;
+}
 
 int rearrangeStringToPalindrome(char* str) {
     int hist[LETTERS] = { 0 }, counter = 0;
@@ -17,16 +31,6 @@ int rearrangeStringToPalindrome(char* str) {
     return mercy >= 0;
 }
 
-void print_array(int arr[], int n) {
-    for (int i = 0; i < n; i++) {
-        printf("%d, ", arr[i]);
-    }
-    printf("\n");
-}
+int is_partition_possible(int arr[], int n) {
 
-int main(void) {
-    char str[] = "hellohello";
-    int res = rearrangeStringToPalindrome(str);
-    printf("%d\n", res);
-    return 0;
 }
